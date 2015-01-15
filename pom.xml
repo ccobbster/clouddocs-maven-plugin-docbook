@@ -650,13 +650,13 @@
               </configuration>
             </plugin>
 
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-gpg-plugin</artifactId>
-              <!-- override the version inherited from the parent -->
-              <version>1.4</version>
-              <configuration><useAgent>true</useAgent></configuration>
-            </plugin>
+<!--             <plugin> -->
+<!--               <groupId>org.apache.maven.plugins</groupId> -->
+<!--               <artifactId>maven-gpg-plugin</artifactId> -->
+<!--               override the version inherited from the parent -->
+<!--               <version>1.4</version> -->
+<!--               <configuration><useAgent>true</useAgent></configuration> -->
+<!--             </plugin> -->
 
         </plugins>
     </build>
