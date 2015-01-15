@@ -253,72 +253,8 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com/rackerlabs/clouddocs-maven-plugin-docbook.git</connection>
+        <connection>scm:git:ssh://git@github.com/ccobbster/clouddocs-maven-plugin-docbook.git</connection>
     </scm>
-<!--
-    <scm>
-      <url>https://github.com/rackerlabs/clouddocs-maven-plugin-docbook/tree/master</url>
-      <connection>scm:git:git://github.com/rackerlabs/clouddocs-maven-plugin-docbook.git</connection>
-      <developerConnection>scm:git:git@github.com:rackerlabs/clouddocs-maven-plugin-docbook.git</developerConnection>
-      <tag>clouddocs-maven-plugin-docbook-2.1.5</tag>
-    </scm>
--->
-
-<!--
-     <repositories>
-        <repository>
-        <id>docs-staging</id>
-        <name>Docbook server</name>
-        <url>http://162.209.12.245/nexus/content/repositories/docs-staging/</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-        <repository>
-        <id>docs-prod</id>
-        <name>Docbook server</name>
-        <url>http://162.209.12.245/nexus/content/repositories/docs-prod/</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-    </repositories>
-
-   <pluginRepositories>
-      <pluginRepository>
-        <id>docs-staging</id>
-        <name>Docbook</name>
-        <url>http://162.209.12.245/nexus/content/repositories/docs-staging/</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </pluginRepository>
-      <pluginRepository>
-        <id>docs-prod</id>
-        <name>Docbook</name>
-        <url>http://162.209.12.245/nexus/content/repositories/docs-prod/</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </pluginRepository>
-    </pluginRepositories>
--->
 
   <distributionManagement>
      <repository>
