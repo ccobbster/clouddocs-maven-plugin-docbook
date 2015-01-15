@@ -290,8 +290,8 @@
                     <compilerArgs>
                       <arg>-Xlint</arg>
                       <arg>-Xlint:-serial</arg>
-                      <arg>-bootclasspath</arg>
-                      <arg>${bootclasspath.compile}</arg>
+<!--                       <arg>-bootclasspath</arg> -->
+<!--                       <arg>${bootclasspath.compile}</arg> -->
                     </compilerArgs>
                   </configuration>
                 </execution>
@@ -301,8 +301,8 @@
                     <compilerArgs>
                       <arg>-Xlint</arg>
                       <arg>-Xlint:-serial</arg>
-                      <arg>-bootclasspath</arg>
-                      <arg>${bootclasspath.testCompile}</arg>
+<!--                       <arg>-bootclasspath</arg> -->
+<!--                       <arg>${bootclasspath.testCompile}</arg> -->
                     </compilerArgs>
                   </configuration>
                 </execution>
@@ -314,15 +314,15 @@
     </profiles>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
+<!--         <resources> -->
+<!--             <resource> -->
+<!--                 <directory>src/main/resources</directory> -->
+<!--             </resource> -->
 
-            <resource>
-                <directory>target/generated-resources</directory>
-            </resource>
-        </resources>
+<!--             <resource> -->
+<!--                 <directory>target/generated-resources</directory> -->
+<!--             </resource> -->
+<!--         </resources> -->
 
         <plugins>
         <!--
@@ -369,7 +369,7 @@
                                     <version>1.76.1</version>
                                     <type>zip</type>
                                     <classifier>ns-resources</classifier>
-                                    <outputDirectory>target</outputDirectory>
+                                    <outputDirectory>${project.build.directory}</outputDirectory>
                                     <includes>docbook/template/*</includes>
                                 </artifactItem>
                             </artifactItems>
@@ -390,7 +390,7 @@
                                     <version>${wadl.tools.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>target/classes/cloud/normalizeWadl</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/classes/cloud/normalizeWadl</outputDirectory>
                                     <destFileName />
                                     <includes>
                                         **/normalizeWadl1.xsl,
@@ -418,7 +418,7 @@
 		  <phase>initialize</phase>
 		  <configuration>		    
 		    <target>
-		      <replace file="target/classes/cloud/normalizeWadl/normalizeWadl1.xsl" token="href=&quot;normalizeWadl" value="href=&quot;classpath:///cloud/normalizeWadl/normalizeWadl" />
+		      <replace file="${project.build.directory}/classes/cloud/normalizeWadl/normalizeWadl1.xsl" token="href=&quot;normalizeWadl" value="href=&quot;classpath:///cloud/normalizeWadl/normalizeWadl" />
 		    </target>		    
 		  </configuration>
 		  <goals>
@@ -443,9 +443,9 @@
                 <configuration>
                     <transformationSets>
                         <transformationSet>
-                            <dir>src/main/resources/cloud/fo/titlepage</dir>
-                            <stylesheet>target/docbook/template/titlepage.xsl</stylesheet>
-                            <outputDir>target/generated-resources/cloud/fo</outputDir>
+                            <dir>${basedir}/src/main/resources/cloud/fo/titlepage</dir>
+                            <stylesheet>${project.build.directory}/docbook/template/titlepage.xsl</stylesheet>
+                            <outputDir>${project.build.directory}/generated-resources/cloud/fo</outputDir>
                             <fileMappers>
                                 <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
                                     <targetExtension>.xsl</targetExtension>
@@ -453,9 +453,9 @@
                             </fileMappers>
                         </transformationSet>
                         <transformationSet>
-                            <dir>src/main/resources/cloud/webhelp/titlepage</dir>
-                            <stylesheet>target/docbook/template/titlepage.xsl</stylesheet>
-                            <outputDir>target/generated-resources/cloud/webhelp</outputDir>
+                            <dir>${basedir}/src/main/resources/cloud/webhelp/titlepage</dir>
+                            <stylesheet>${project.build.directory}/docbook/template/titlepage.xsl</stylesheet>
+                            <outputDir>${project.build.directory}/generated-resources/cloud/webhelp</outputDir>
                             <fileMappers>
                                 <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
                                     <targetExtension>.xsl</targetExtension>
